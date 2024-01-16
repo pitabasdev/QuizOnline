@@ -17,6 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/blue"
         android:padding="8dp"
         android:orientation="vertical">
 
@@ -28,7 +30,7 @@
 
             android:textSize="34sp"
             android:letterSpacing="0.1"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textStyle="bold"/>
 
         <TextView
@@ -38,7 +40,7 @@
             android:gravity="center"
             android:textSize="18sp"
             android:layout_margin="16dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textStyle="bold"/>
 
 
