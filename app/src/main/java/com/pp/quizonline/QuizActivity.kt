@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.pp.quizonline.databinding.ActivityQuizBinding
+import com.pp.quizonline.databinding.ScoreDialogBinding
 
 import kotlin.math.min
 
@@ -111,27 +112,27 @@ class QuizActivity : AppCompatActivity(),View.OnClickListener {
         val totalQuestions = questionModelList.size
         val percentage = ((score.toFloat() / totalQuestions.toFloat() ) *100 ).toInt()
 
-//        val dialogBinding  = ScoreDialogBinding.inflate(layoutInflater)
-//        dialogBinding.apply {
-//            scoreProgressIndicator.progress = percentage
-//            scoreProgressText.text = "$percentage %"
-//            if(percentage>60){
-//                scoreTitle.text = "Congrats! You have passed"
-//                scoreTitle.setTextColor(Color.BLUE)
-//            }else{
-//                scoreTitle.text = "Oops! You have failed"
-//                scoreTitle.setTextColor(Color.RED)
-//            }
-//            scoreSubtitle.text = "$score out of $totalQuestions are correct"
-//            finishBtn.setOnClickListener {
-//                finish()
-//            }
-//        }
+        val dialogBinding  = ScoreDialogBinding.inflate(layoutInflater)
+        dialogBinding.apply {
+            scoreProgressIndicator.progress = percentage
+            scoreProgressText.text = "$percentage %"
+            if(percentage>60){
+                scoreTitle.text = "Congrats! You have passed"
+                scoreTitle.setTextColor(Color.BLUE)
+            }else{
+                scoreTitle.text = "Oops! You have failed"
+                scoreTitle.setTextColor(Color.RED)
+            }
+            scoreSubtitle.text = "$score out of $totalQuestions are correct"
+            finishBtn.setOnClickListener {
+                finish()
+            }
+        }
 
-//        AlertDialog.Builder(this)
-//            .setView(dialogBinding.root)
-//            .setCancelable(false)
-//            .show()
+        AlertDialog.Builder(this)
+            .setView(dialogBinding.root)
+            .setCancelable(false)
+            .show()
 
     }
 }
