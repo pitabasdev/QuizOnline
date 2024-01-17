@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         quizModelList = mutableListOf()
-//        getDataFromFirebase()
+        getDataFromFirebase()
 
 
     }
