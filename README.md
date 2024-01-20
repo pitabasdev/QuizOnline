@@ -23,4 +23,4 @@ To run the QuizOnline app locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/QuizOnline.git
+   git clone https://github.com/pitabasdev/QuizOnline.git
